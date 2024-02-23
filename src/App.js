@@ -14,7 +14,7 @@ function App() {
 
   const addTask = async(title)=>{
     setTasks((tasks)=>[...tasks,{id:tasks.length+1,title}]);
-    console.log(tasks);
+    console.log(tasks);//Here the tasks is not getting updated to the latest todo but get updated when u add the next todo
     const stringifiedTasks = JSON.stringify(tasks);
     localStorage.setItem('tasks', [stringifiedTasks]);
   }
